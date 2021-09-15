@@ -32,9 +32,11 @@ Link to download the code base
 ### Action Item 1: Create a local git repository and move the entire code base to it.
 
 You have to create a git local repository. First create a directory to separate it out.
+
     $ mkdir startupRepo
 
 Change the current working dirctory
+
     $ cd startupRepo
 
     $ ls -alrt
@@ -44,7 +46,9 @@ Change the current working dirctory
 
 
 Initialize a git local project
+
     $ git init
+
 Initialized empty Git repository in D:/Projects/GitHub/startupRepo/.git/
 
     $ ls -alrt
@@ -71,6 +75,7 @@ Now i need to put my company's codebase in this directory. Let me go ahead and c
 Yeah..!! We have created a local git repository. Lets commit our code and see which branch are we in..
 
 git status shows the status of your local git repository.
+
     $ git status
     starting fsmonitor-daemon in 'D:/Projects/GitHub/startupRepo'
     On branch master
@@ -110,56 +115,68 @@ After commit, you see that there is master branch and we dont have anymore untra
 ### Action Item 2: Create a new branch for a new feature you want to add to the application
 
 create a feature branch
+
     $ git branch feature/add-my-name
 
 Now you can see your feature branch
+
     $ git branch
       feature/add-my-name
     * master
 
 Switch to your feature branch
+
     $ git checkout feature/add-my-name
     Switched to branch 'feature/add-my-name'
 
 Now you can see that you are on the feature branch
+
     $ git branch
     * feature/add-my-name
       master
 
 You may check the status at any point of time.
+
     $ git status
     On branch feature/add-my-name
     nothing to commit, working tree clean
 
 You have the same files as in your master branch. You can change the content in your feature branch without touching master branch.
+
     $ cat helloWorld.txt
     Hello..!!
     This is a startup project
 
 Added below line in the file.
+
     $ cat helloWorld.txt
     Hello..!!
     This is a startup project
     I am hemanththedevopsengineer..!!
 
 Now you need to add the file.
+
     $ git add .
 
 commit the changes so that it is saved and tracked. do not switch branch with untracked work.
+
     $ git commit -m "adding my name"
     [feature/add-my-name 1d4ba81] adding my name
     1 file changed, 1 insertion(+)
 
 Now you can see that your branch is clean.
+
     $ git status
     On branch feature/add-my-name
     nothing to commit, working tree clean
 
 Switch back t master branch and see if the content was changed in master branch as well
+
     $ git checkout master
     Switched to branch 'master'
 
 Answer is No. Now you see that you have 2 different versions of code which you can work on.
+
     $ cat helloWorld.txt
     Hello..!!
     This is a startup project
@@ -168,10 +185,12 @@ Answer is No. Now you see that you have 2 different versions of code which you c
 
 Once you are ready with your feature branch code, merge it to master branch. Before that make sure you are on the master branch.
 If not do a git checkout master.
+
     $ git checkout master
     Switched to branch 'master'
 
 Next merge the branch as below.
+
     $ git merge feature/add-my-name
     Updating 590cd05..1d4ba81
     Fast-forward
@@ -179,6 +198,7 @@ Next merge the branch as below.
     1 file changed, 1 insertion(+)
 
 Now you can verify that the code you commited in your feature branch is merged to master
+
     $ cat helloWorld.txt
     Hello..!!
     This is a startup project
@@ -192,9 +212,11 @@ If you are facing difficulty. follow through on https://docs.github.com/en/get-s
 ### Action Item 5: Push the local repository to company's remote repository
 
 Get the repository link and add your username@github.com as shown below.
+
     $ git remote add origin https://hemanththedevopsengineer@github.com/HemanthDevopsLearnings/startupRepo.git
 
 Execute below command.
+
     $ git push origin master
     info: please complete authentication in your browser...
     Enumerating objects: 6, done.

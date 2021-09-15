@@ -12,8 +12,6 @@ Multiple Developers working simultaneously on same block of code also caused pro
 4. Create a remote repository
 5. Push the local repository to company's remote repository
 
-Link to download the code base
-
 
 ## Solution:
 

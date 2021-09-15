@@ -1,11 +1,11 @@
 # MyFirstGitHubProject
 
-##Problem Statement
+## Problem Statement
 
 Five Developers are working in a startup. Their company wants a better Source Code Management System because the earlier tool had the tendency to save redundant code.
 Multiple Developers working simultaneously on same block of code also caused problems. You and jake, and your manager has given you the task of moving company's codebase to git and Github
 
-Action Items
+### Action Items
 1. Create a local git repository and move the entire code base to it.
 2. Create a new branch for a new feature you want to add to the application
 3. Merge back the created branch with the master branch
@@ -15,9 +15,9 @@ Action Items
 Link to download the code base
 
 
-##Solution:
+## Solution:
 
-###Pre-requisites
+### Pre-requisites
 
 * Go to https://github.com/ and create an account
 * Go to https://git-scm.com/downloads and install git
@@ -29,7 +29,7 @@ Link to download the code base
 - Output:
     git version 2.33.0.windows.2
 
-###Action Item 1: Create a local git repository and move the entire code base to it.
+### Action Item 1: Create a local git repository and move the entire code base to it.
 
 You have to create a git local repository. First create a directory to separate it out.
     $ mkdir startupRepo
@@ -107,7 +107,7 @@ After commit, you see that there is master branch and we dont have anymore untra
     * master
 
 
-###Action Item 2: Create a new branch for a new feature you want to add to the application
+### Action Item 2: Create a new branch for a new feature you want to add to the application
 
 create a feature branch
     $ git branch feature/add-my-name
@@ -164,7 +164,7 @@ Answer is No. Now you see that you have 2 different versions of code which you c
     Hello..!!
     This is a startup project
 
-###Action Item 3: Merge back the created branch with the master branch
+### Action Item 3: Merge back the created branch with the master branch
 
 Once you are ready with your feature branch code, merge it to master branch. Before that make sure you are on the master branch.
 If not do a git checkout master.
@@ -184,12 +184,12 @@ Now you can verify that the code you commited in your feature branch is merged t
     This is a startup project
     I am hemanththedevopsengineer..!!
 
-###Action Item 4: Create a remote repository
+### Action Item 4: Create a remote repository
 
 Now go to guthub where you had registered as per pre-requisites and create a repository with name startupRepo.
 If you are facing difficulty. follow through on https://docs.github.com/en/get-started/quickstart/create-a-repo
 
-###Action Item 5: Push the local repository to company's remote repository
+### Action Item 5: Push the local repository to company's remote repository
 
 Get the repository link and add your username@github.com as shown below.
     $ git remote add origin https://hemanththedevopsengineer@github.com/HemanthDevopsLearnings/startupRepo.git
